@@ -1,6 +1,6 @@
 # Overview
 
-Docker image of `curl` compiled with `quictls/openssl`, `nghttp3`, and `ngtcp2` for **HTTP/3** request on `ubutun:18.04`.
+Docker image for `HTTP/3` request on `ubutun:18.04` by `curl` ft. `quictls/openssl`, `nghttp3`, and `ngtcp2`.
 
 Reference: https://github.com/curl/curl/blob/master/docs/HTTP3.md#ngtcp2-version
 
