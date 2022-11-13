@@ -9,7 +9,7 @@ Reference: https://github.com/curl/curl/blob/master/docs/HTTP3.md#ngtcp2-version
 Let's call the HTTP/3 service via docker by
 
 ```shell
-$ docker run -it --rm nguyenptk/curl-http3:latest curl -IL --http3 https://google.com
+$ docker run -it --rm nguyenptk/curl-http3 curl -IL --http3 https://google.com
 
 HTTP/3 301
 location: https://www.google.com/
