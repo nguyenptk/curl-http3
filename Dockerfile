@@ -1,14 +1,17 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
+
+ENV TZ=Asia/Ho_Chi_Minh
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt-get update \
     && apt-get upgrade -y \
-    && apt-get install -y git autoconf libtool pkg-config \
+    && apt-get install -y git make autoconf libtool pkg-config tzdata \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf /tmp/* /var/tmp/* \
     && rm -rf /var/lib/apt/lists/*
 
-ARG OPENSSL_VERSION=openssl-3.0.0+quic
+ARG OPENSSL_VERSION=openssl-3.0.7+quic
 ARG NGHTTP3_VERSION=v0.7.1
 ARG NGTCP2_VERSION=v0.11.0
 ARG CURL_VERSION=curl-7_86_0
